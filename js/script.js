@@ -1,18 +1,20 @@
-const projectList = document.querySelectorAll("#projects ul li");
-projectList.forEach(item => {
-    const details = document.createElement("p");
-    details.textContent = "Enter Project Description Here";
-    details.classList.add("hidden");
-    item.appendChild(details);
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Portfolio script loaded successfully.");
 
-    const button = document.createElement("button");
-    button.textContent = "Show Details";
-    button.classList.add("toggleBtn");
+  const toggleButtons = document.querySelectorAll(".toggle-details");
 
+  toggleButtons.forEach(button => {
     button.addEventListener("click", () => {
-        details.classList.toggle("hidden");
-        button.textContent = details.classList.contains("hidden")
-            ? "Show Details"
-            : "Hide Details";
+      const details = button.nextElementSibling;
+      const isVisible = details.classList.contains("visible");
+
+      if (isVisible) {
+        details.classList.remove("visible");
+        button.textContent = "Show Details";
+      } else {
+        details.classList.add("visible");
+        button.textContent = "Hide Details";
+      }
     });
+  });
 });
