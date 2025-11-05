@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tyler's Portfolio</title>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js" defer></script>
     </head>
     <body>
         <header class="site-header">
@@ -22,18 +23,37 @@
         <main>
             <section id="about">
                 <h2>About Me</h2>
-                <p> Hello! I’m Tyler, a Computer Science student with a passion for building software that blends new technologies with a friendly user interface. 
+                <p> Hello! I'm Tyler, a Computer Science student with a passion for building software that blends new technologies with a friendly user interface. 
                 I focus on web development, AI integration, and user interface design, turning ideas into clean, responsive, and engaging digital experiences. </p>
-                <p> I’m continuously exploring new technologies to expand my skillset and refine my problem-solving approach. My goal is to develop solutions that are not only functional but also intuitive and meaningful for users. </p>
+                <p> I'm continuously exploring new technologies to expand my skillset and refine my problem-solving approach. My goal is to develop solutions that are not only functional but also intuitive and meaningful for users. </p>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>Here are some examples of my recent work:</p>
-                <ul>
-                    <li><strong>Personal Portfolio Website</strong> - Custom portfolio designed for interactive display and web applications.</li>
-                    <li><strong>Business Oriented Website</strong> - Simple one page website designed to provide information and booking access to potential clients. </li>
-                    <li><strong>Custom Map UI Designer</strong> - WIP design for a custom map creator with UI based selections for icon and drawings.</li>
-                </ul>
+            <section id="projects" class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="https://www.tylerhoyos.com" target="_blank" class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>A sleek, personal portfolio showcasing my work, experience, and contact information.</p>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://www.wcdynamics.com" target="_blank" class="project-card">
+                    <h3>Business-Oriented Website</h3>
+                    <p>Professional website built for World Class Dynamics - an AI automation consultancy.</p>
+                </a>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Tarkov Quest Tracker</h3>
+                    <p>A game-focused UI tool designed to help players manage quests and inventory tracking.</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <h3>Custom Map UI Designer</h3>
+                    <p>Custom map designer that allows the user to draw, write, or add any custom icons to any uploaded map.</p>
+                </div>
+            </div>
             </section>
 
             <section id="contact">
