@@ -265,6 +265,10 @@ section {
   opacity: 1;
 }
 
+.project-details.visible p {
+  margin-bottom: 1rem;
+}
+
 .toggle-details,
 .project-link {
   background: var(--accent);
