@@ -224,7 +224,7 @@ section {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .project-card h3 {
