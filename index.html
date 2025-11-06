@@ -73,14 +73,36 @@
             </section>
 
             <section id="contact">
-                <h2>Contact</h2>
-                <p>Let's connect! I am always open to possibly collaborations, freelance opportunities and conversations relating to my current, active or past projects.</p>
-                <ul>
-                    <li>Personal Email: <a href="mailto:tylerhoyos@gmail.com">tylerhoyos@gmail.com</a></li>
-                    <li>Business Email: <a href="mailto:founders@wcdynamics.com">founders@wcdynamics.com</a></li>
-                    <li>LinkedIn: <a href="https://linkedin.com/in/tylerhoyos" target="_blank">linkedin.com/in/tylerhoyos</a></li>
-                    <li>GitHub: <a href="https://github.com/BulletTRL/" target="_blank">github.com/bullettrl</a></li>
-                </ul>
+            <h2>Contact</h2>
+            <p>Have an idea for a collaboration? Feel free to contact me below!</p>
+
+            <form id="contact-form" novalidate>
+                <div class="form-field">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" placeholder="Enter your first name" required>
+                <small class="error-message"></small>
+                </div>
+
+                <div class="form-field">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Enter your last name (optional)">
+                <small class="error-message"></small>
+                </div>
+
+                <div class="form-field">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+                <small class="error-message"></small>
+                </div>
+
+                <div class="form-field">
+                <label for="message">Message *</label>
+                <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+                <small class="error-message"></small>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
             </section>
         </main>
 
