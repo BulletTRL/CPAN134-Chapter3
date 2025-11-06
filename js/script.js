@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Confirmation of script loading
   console.log("Portfolio script loaded successfully.");
 
   const toggleButtons = document.querySelectorAll(".toggle-details");
 
   toggleButtons.forEach(button => {
     button.addEventListener("click", () => {
-      const details = button.nextElementSibling;
+      const details = button.previousElementSibling;
       const isVisible = details.classList.contains("visible");
 
       if (isVisible) {
@@ -18,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 // Contact Form Validation Setup
 document.addEventListener("DOMContentLoaded", () => {
@@ -69,4 +69,31 @@ document.addEventListener("DOMContentLoaded", () => {
     error.classList.add("active");
     input.classList.add("error");
   }
+});
+
+// Project Details Toggle Button with click functions
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach(card => {
+    const button = card.querySelector(".toggle-details");
+    const details = card.querySelector(".project-details");
+
+    // Make entire card clickable (open project link)
+    card.addEventListener("click", (e) => {
+      // Prevent click if user pressed the toggle button
+      if (e.target.classList.contains("toggle-details")) return;
+
+      const link = card.getAttribute("data-link");
+      if (link) window.open(link, "_blank");
+    });
+
+    // Handle show/hide details toggle
+    button.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent triggering card click
+      const isVisible = details.classList.toggle("visible");
+      card.classList.toggle("expanded", isVisible);
+      button.textContent = isVisible ? "Hide Details" : "Show Details";
+    });
+  });
 });
